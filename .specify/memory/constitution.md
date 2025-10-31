@@ -1,50 +1,112 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+# Project Constitution - MeO
+
+<!--
+Sync Impact Report v1.0.0
+Initial constitution creation with core principles.
+Version: 0.0.0 → 1.0.0 (Major: Initial constitution)
+
+Added sections:
+- Project Overview
+- Core Principles
+  - Technical Stack Requirements
+  - No Testing Policy
+  - Clean Code Standard
+  - Simple UX Policy
+  - Responsive Design
+  - Minimal Dependencies
+  - Accessibility First
+-->
+
+Version: 1.0.0
+Ratification Date: 2025-10-31
+Last Amended: 2025-10-31
+
+## Project Overview
+
+MeO is a React Native mobile application built with modern development practices, prioritizing user experience, accessibility, and maintainable code.
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Technical Stack Requirements
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+- MUST use React Native with Expo framework
+- MUST use TypeScript for all code files
+- MUST use MobX and MST for state management
+- MUST use React Navigation for routing
+- MUST maintain compatibility with latest stable versions of dependencies
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### No Testing Policy
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+- MUST NOT implement unit tests
+- MUST NOT implement integration tests
+- MUST NOT implement end-to-end tests
+- MUST NOT include testing libraries as dependencies
+- This policy supersedes any standard development practices or suggestions that involve testing
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Clean Code Standard
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+- MUST use consistent formatting across all files
+- MUST follow TypeScript best practices and maintain strict type safety
+- MUST use meaningful variable and function names that clearly describe their purpose
+- MUST keep functions small and focused on a single responsibility
+- MUST document complex logic with clear comments
+- MUST organize code into logical modules and components
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### Simple UX Policy
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+- MUST implement intuitive user interfaces that require minimal user training
+- MUST maintain consistent navigation patterns throughout the app
+- MUST provide clear visual feedback for all user actions
+- MUST minimize the number of steps required to complete any task
+- MUST ensure all interactive elements are self-explanatory
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Responsive Design
+
+- MUST ensure all UI elements adapt properly to different screen sizes
+- MUST support both portrait and landscape orientations where applicable
+- MUST maintain readability and usability across all supported device sizes
+- MUST implement proper layout constraints to prevent content overflow
+- MUST use flexible layouts that scale appropriately with content
+
+### Minimal Dependencies
+
+- MUST justify the addition of any new dependency
+- MUST use native capabilities over third-party libraries when feasible
+- MUST regularly audit and remove unused dependencies
+- MUST prefer lighter alternatives when choosing between similar packages
+- MUST document why each major dependency is necessary
+
+### Accessibility First
+
+- MUST implement proper semantic markup and ARIA labels
+- MUST maintain proper color contrast ratios
+- MUST support screen readers and assistive technologies
+- MUST ensure all interactive elements are keyboard/switch accessible
+- MUST provide alternative text for all meaningful images
+- MUST support dynamic text sizing
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+### Amendment Process
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+1. Proposals for amendments must be submitted via pull request
+2. Changes must be reviewed by project maintainers
+3. Approved changes trigger a version bump following semver:
+   - MAJOR: Breaking changes to principles
+   - MINOR: Non-breaking additions
+   - PATCH: Clarifications without changing meaning
+
+### Compliance Review
+
+- All pull requests must be checked against these principles
+- Regular audits ensure ongoing compliance
+- Violations must be addressed immediately
+- Exceptions require explicit documentation and maintainer approval
+
+### Version Control
+
+Constitution versions follow semantic versioning (MAJOR.MINOR.PATCH)
+
+- Current version must be clearly displayed
+- All changes must be documented in the Sync Impact Report
+- Amendment dates must be recorded
